@@ -4,7 +4,8 @@ import Contact from './Routing/Contact';
 import Footer from './Routing/Footer';
 import Header from './Routing/Header';
 import Home from './Routing/Home'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom'
+import PageNotFound from './Routing/PageNotFound';
 
 
 function App() {
@@ -12,17 +13,17 @@ function App() {
   return (
     <Router>
       
-      {/* <Header /> */}
+      <Header />
 
         <Routes>
-
+          <Route path='/' element={ <Navigate to='/home' /> } />
           <Route path='/home' element={<Home />}/>
           <Route path='/about' element={<About />}/>
           <Route path='/contact'element={<Contact />}/>
-
+          <Route path='/*' element={<PageNotFound />} />
         </Routes>
 
-      {/* <Footer /> */}
+      <Footer />
 
      </Router>
   )
