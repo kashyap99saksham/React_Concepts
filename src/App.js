@@ -10,6 +10,7 @@ import Product from './Routing/Product';
 import MobileList from './Routing/MobileList';
 import LaptopList from './Routing/LaptopList';
 import ProductDesc from './Routing/ProductDesc'
+import ProductDetail from './Routing/ProductDetail';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             </Route>
             <Route path='laptop' element={<LaptopList />}/>
           </Route>
-          
+          <Route  path='/detailpage' element={ <ProductDetail />  } />
 
         </Routes>
 

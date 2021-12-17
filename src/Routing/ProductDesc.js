@@ -10,7 +10,10 @@ const ProductDesc = () => {
     const anyFunctionName = () => {
         console.log("Ruko Zara!");
         alert("We are done with the validation! Go to Any Page");
-        navigate('/detailpage')
+        navigate('/detailpage', {state : {
+            amount: '1Rs',
+            name: 'Refill'
+        }})
     }
 
     return (
