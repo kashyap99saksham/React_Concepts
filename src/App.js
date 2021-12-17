@@ -9,6 +9,7 @@ import PageNotFound from './Routing/PageNotFound';
 import Product from './Routing/Product';
 import MobileList from './Routing/MobileList';
 import LaptopList from './Routing/LaptopList';
+import ProductDesc from './Routing/ProductDesc'
 
 
 function App() {
@@ -19,10 +20,13 @@ function App() {
         <Routes>
           <Route path='/' element={ <Home /> } />
           <Route path='/products' element={<Product />}> 
-            <Route path='mobile' element={<MobileList />}/>
+            <Route path='mobile' element={<MobileList />}>
+              <Route path=':mobileItem' element={<ProductDesc />} /> 
+            </Route>
             <Route path='laptop' element={<LaptopList />}/>
           </Route>
           
+
         </Routes>
 
 
